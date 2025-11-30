@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="text-center mt-5">
+    <h1 class="display-4">Welcome to SkillBridge</h1>
+    <p class="lead">Connecting students with real-world projects and businesses with fresh talent.</p>
+    <hr class="my-4">
+    <p>Get started by exploring projects, posting your own, or applying to opportunities.</p>
+    <div class="mt-4">
+      <a href="{{ url_for('projects.list_projects') }}" class="btn btn-primary btn-lg">Explore Projects</a>
+      <a href="{{ url_for('auth.register') }}" class="btn btn-success btn-lg">Join Now</a>
+    </div>
+  </div>
+{% endblock %}

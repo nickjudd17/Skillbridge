@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Apply to {{ project.title }}</h2>
+  <form method="POST" class="card p-4 shadow-sm">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+      {{ form.cover_note.label(class="form-label") }}
+      {{ form.cover_note(class="form-control", rows=4) }}
+    </div>
+    {{ form.submit(class="btn btn-success") }}
+  </form>
+{% endblock %}

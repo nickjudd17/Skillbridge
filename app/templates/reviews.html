@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Reviews</h2>
+  <div class="list-group">
+    {% for review in reviews %}
+      <div class="list-group-item">
+        <strong>Rating:</strong> {{ review.rating }}<br>
+        <strong>Comment:</strong> {{ review.comment }}<br>
+        <small class="text-muted">By User #{{ review.reviewer_id }}</small>
+      </div>
+    {% else %}
+      <p class="text-muted">No reviews yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

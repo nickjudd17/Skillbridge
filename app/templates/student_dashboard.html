@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="mt-4">
+    <h2 class="mb-3">Student Dashboard</h2>
+    <p class="lead">Welcome, {{ current_user.username }}! Here’s your activity:</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Explore Projects</h5>
+            <p class="card-text">Browse available projects and apply to opportunities that interest you.</p>
+            <a href="{{ url_for('projects.list_projects') }}" class="btn btn-primary">View Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title">My Applications</h5>
+            <p class="card-text">Track the status of your applications and manage your submissions.</p>
+            <a href="{{ url_for('applications.list_applications') }}" class="btn btn-info">View Applications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

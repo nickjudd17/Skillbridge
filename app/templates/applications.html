@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>My Applications</h2>
+  <div class="list-group">
+    {% for app in applications %}
+      <div class="list-group-item">
+        <strong>Project:</strong> {{ app.project.title }}<br>
+        <strong>Status:</strong> {{ app.status }}<br>
+        <strong>Cover Note:</strong> {{ app.cover_note }}
+      </div>
+    {% else %}
+      <p class="text-muted">No applications submitted yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
